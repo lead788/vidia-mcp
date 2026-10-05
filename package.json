@@ -1,0 +1,56 @@
+{
+  "name": "vidia-mcp",
+  "version": "1.0.0",
+  "description": "VIDIA MCP — let AI agents quote, produce and download AI videos on vidia.kr. 비디아 AI 영상 제작(견적·제작·진행 확인·결과물 다운로드)을 MCP 도구로.",
+  "type": "module",
+  "license": "MIT",
+  "author": "VIDIA",
+  "homepage": "https://vidia.kr/help/guide/developer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lead788/vidia-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lead788/vidia-mcp/issues"
+  },
+  "mcpName": "kr.vidia/vidia",
+  "bin": {
+    "vidia-mcp": "src/index.js"
+  },
+  "exports": {
+    ".": "./src/bridge.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "TOOLS.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "model-context-protocol",
+    "mcp-server",
+    "claude",
+    "claude-code",
+    "claude-desktop",
+    "cursor",
+    "codex",
+    "ai-agent",
+    "vidia",
+    "ai-video",
+    "video-generation",
+    "shorts",
+    "youtube-shorts",
+    "text-to-video",
+    "korean"
+  ]
+}
