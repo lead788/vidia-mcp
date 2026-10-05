@@ -98,5 +98,5 @@ test('공개 메타데이터: 이름·bin·mcpName·저장소가 맞고 README �
 	assert.match(readme, /https:\/\/vidia\.kr\/mcp/);
 	assert.match(readme, /VIDIA_API_KEY/);
 	assert.doesNotMatch(readme, /vd_live_[A-Za-z0-9]{32}/);
-	for (const tool of ['vidia_account', 'vidia_list_packages', 'vidia_get_package', 'vidia_quote', 'vidia_start_run', 'vidia_get_run', 'vidia_list_runs', 'vidia_cancel_run', 'vidia_get_downloads']) assert.match(readme, new RegExp('`' + tool + '`'));
+	for (const tool of ['vidia_account', 'vidia_list_packages', 'vidia_get_package', 'vidia_quote', 'vidia_start_run', 'vidia_get_run', 'vidia_list_runs', 'vidia_cancel_run', 'vidia_list_assets', 'vidia_get_downloads']) assert.match(readme, new RegExp('`' + tool + '`'));
 });

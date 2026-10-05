@@ -133,6 +133,7 @@ VIDIA_API_KEY=YOUR_VIDIA_API_KEY npx -y vidia-mcp
 | `vidia_get_run` | 상태·진행 단계·예상 남은 시간 / state, step, ETA | 무료 free |
 | `vidia_list_runs` | 내 제작 목록 / my productions | 무료 free |
 | `vidia_cancel_run` | 제작 취소 / cancel a production | — |
+| `vidia_list_assets` | 내 자료실 파일 id(사진·영상 입력 칸에 넣음) / library file ids for file inputs | 무료 free |
 | `vidia_get_downloads` | 완성 영상·썸네일·자막 다운로드 링크(1시간) / download links, 1 hour | 무료 free |
 
 입력·출력 형식은 [TOOLS.md](TOOLS.md) 를 보세요. See [TOOLS.md](TOOLS.md) for arguments and results.

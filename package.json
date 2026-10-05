@@ -1,6 +1,6 @@
 {
   "name": "vidia-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VIDIA MCP — let AI agents quote, produce and download AI videos on vidia.kr. 비디아 AI 영상 제작(견적·제작·진행 확인·결과물 다운로드)을 MCP 도구로.",
   "type": "module",
   "license": "MIT",

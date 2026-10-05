@@ -41,7 +41,7 @@ vidia_list_packages → vidia_get_package → vidia_quote → (사용자 동의 
 
 결과에 `inputs` 가 있습니다. 견적·제작의 `input` 은 이 칸의 `key` 로 채웁니다. 칸 속성: `key, label, type(text|longtext|number|select|boolean|url|asset), required, help, options, min, max, maxLength, default, showWhen`. `asset` 칸은 비디아 자료실에 올린 파일 id 입니다.
 
-`inputs` lists the fields to fill. Use each `key` in `input`. `asset` fields take file ids from your VIDIA library.
+`inputs` lists the fields to fill. Use each `key` in `input`. `asset` fields take file ids from `vidia_list_assets`.
 
 ## `vidia_quote`
 
@@ -88,6 +88,10 @@ Call only after showing the quote and getting the user's consent. Requires a `ru
 ## `vidia_cancel_run` — 되돌릴 수 없음 / irreversible
 
 `run_id`(필수), `confirmed`(오류로 멈춘 제작을 전액 돌려받고 취소할 때 — 만든 파일이 지워짐). `run` 권한 키가 필요합니다.
+
+## `vidia_list_assets`
+
+`kind`(image·video·audio), `q`, `limit`. 결과 / Result: `{ items: [{ id, kind, name, bytes, width, height, durationSec, createdAt }] }`. 입력 칸 `type` 이 `asset` 이면 이 `id` 를 넣습니다(여러 장이면 배열). 파일 올리기는 웹 자료실이나 REST·SDK(`POST /api/v1/assets`, `run` 키)로 합니다. / Use these ids in `asset` fields; upload via the web, REST or the SDK.
 
 ## `vidia_get_downloads`
 
