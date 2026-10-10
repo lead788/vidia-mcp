@@ -16,7 +16,7 @@ export function redact(text, apiKey) {
 	if (!text) return text;
 	let out = String(text);
 	if (apiKey) out = out.split(apiKey).join('***');
-	return out.replace(/(Bearer\s+)[\w.\-]+/gi, '$1***').replace(/vd_live_[A-Za-z0-9]+/g, 'vd_live_***');
+	return out.replace(/(Bearer\s+)[\w.\-]+/gi, '$1***').replace(/\b(vd_(?:live|test|oat|ort)_)[A-Za-z0-9]+/g, '$1***');
 }
 
 // HTTPS only, except a local development server. Credentials in the URL are refused.

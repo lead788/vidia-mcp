@@ -86,6 +86,7 @@ test('redact: 키 원문·Bearer 값·vd_live_ 토큰을 가린다', () => {
 	assert.equal(redact('x ' + KEY + ' y', KEY), 'x *** y');
 	assert.equal(redact('Authorization: Bearer abc.def', ''), 'Authorization: Bearer ***');
 	assert.equal(redact('leak vd_live_abcDEF123', ''), 'leak vd_live_***');
+	assert.equal(redact('leak vd_test_abcDEF123 and vd_oat_xyz789', ''), 'leak vd_test_*** and vd_oat_***');
 });
 
 test('공개 메타데이터: 이름·bin·mcpName·저장소가 맞고 README 에 연결 방법이 있다', () => {
