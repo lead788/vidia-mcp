@@ -145,7 +145,7 @@ VIDIA_API_KEY=YOUR_VIDIA_API_KEY npx -y vidia-mcp
 | `vidia_point_history` | 포인트 내역 / point history | 무료 free |
 | `vidia_upload_link` | 자료실에 파일을 올릴 15분짜리 주소 / a 15-minute upload URL | 무료 free |
 | `vidia_list_assets` | 내 자료실 파일 id(사진·영상 입력 칸에 넣음) / library file ids for file inputs | 무료 free |
-| `vidia_get_downloads` | 완성 영상·썸네일·자막 다운로드 링크(1시간)와 유튜브 업로드 키트 / download links (1 hour) and a YouTube upload kit | 무료 free |
+| `vidia_get_downloads` | 완성 영상·썸네일·자막 다운로드 링크(1시간, 받을 때 API 키 헤더나 같은 회원의 로그인 필요)와 유튜브 업로드 키트 / download links (1 hour; fetch with the API key header or while signed in as the same member) and a YouTube upload kit | 무료 free |
 
 입력·출력 형식은 [TOOLS.md](TOOLS.md) 를 보세요. See [TOOLS.md](TOOLS.md) for arguments and results.
 

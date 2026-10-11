@@ -95,9 +95,9 @@ Call only after showing the quote and getting the user's consent. Requires a `ru
 
 ## `vidia_get_downloads`
 
-`run_id`(필수). 결과 / Result: `{ runId, state, ttlSeconds: 3600, items: [{ id, kind, role(final_video|thumbnail|file), label, name, bytes, url, expiresAt }], publish }`. 링크는 키 없이 1시간 동안 받을 수 있고 Range 요청을 지원합니다. `publish` 에는 게시용 제목 후보·설명이 들어 있습니다.
+`run_id`(필수). 결과 / Result: `{ runId, state, ttlSeconds: 3600, items: [{ id, kind, role(final_video|thumbnail|file), label, name, bytes, url, expiresAt }], publish }`. 링크는 1시간 동안 쓸 수 있고 Range 요청을 지원합니다. 링크는 주소만으로는 열리지 않습니다 — 받을 때 이 연결에 쓰는 API 키를 헤더로 함께 보내거나(`curl -H "Authorization: Bearer $VIDIA_API_KEY" -o video.mp4 "<url>"`), 같은 회원으로 비디아에 로그인한 브라우저에서 여세요(결과의 `linkAuth` 안내). 키가 없으면 `401 AUTH_REQUIRED`, 다른 회원이면 `404 LINK_INVALID` 입니다. 키 값은 대화에 적지 마세요. `publish` 에는 게시용 제목 후보·설명이 들어 있습니다.
 
-Links work without a key for one hour and support Range requests.
+Links are valid for one hour and support Range requests. A link does not open on its own: send the API key used for this connection with it (`curl -H "Authorization: Bearer $VIDIA_API_KEY" -o video.mp4 "<url>"`) or open it in a browser signed in to VIDIA as the same member (see `linkAuth` in the result). No key: `401 AUTH_REQUIRED`; another member: `404 LINK_INVALID`. Never paste the key into the conversation.
 
 ## `vidia_wait_run`
 

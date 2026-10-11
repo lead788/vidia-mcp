@@ -1,3 +1,8 @@
+# 1.1.1
+
+- 다운로드 링크 안내를 고쳤습니다(서버 변경): `vidia_get_downloads` 의 링크는 이제 링크를 받은 회원만 쓸 수 있습니다. 받을 때 API 키를 `Authorization: Bearer` 헤더로 함께 보내거나, 같은 회원으로 비디아에 로그인한 브라우저에서 여세요. 키 없이 열면 `401 AUTH_REQUIRED` 입니다. 중계기 코드는 바뀌지 않았습니다(도구 설명과 `linkAuth` 안내는 서버가 줍니다).
+- Download links from `vidia_get_downloads` are now valid only for the member they were issued to (server change). Fetch them with the API key in the `Authorization: Bearer` header, or in a browser signed in to VIDIA as the same member; without a key the answer is `401 AUTH_REQUIRED`. The bridge code is unchanged.
+
 # 1.1.0
 
 - 서버 도구가 21개로 늘었습니다: 멈춘 제작 풀기(`vidia_run_action`)·기다리기(`vidia_wait_run`)·여러 편 시작(`vidia_start_batch`)·입력값(`vidia_run_input`)·마무리(`vidia_finish_run`)·휴지통·추천 주제·공개 결과물·사용량·포인트 내역·업로드 주소. 프롬프트 3종과 도구 결과 구조(outputSchema)도 서버가 제공합니다.
