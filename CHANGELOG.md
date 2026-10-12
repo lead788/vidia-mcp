@@ -1,7 +1,7 @@
 # 1.1.1
 
-- 다운로드 링크 안내를 고쳤습니다(서버 변경): `vidia_get_downloads` 의 링크는 이제 링크를 받은 회원만 쓸 수 있습니다. 받을 때 API 키를 `Authorization: Bearer` 헤더로 함께 보내거나, 같은 회원으로 비디아에 로그인한 브라우저에서 여세요. 키 없이 열면 `401 AUTH_REQUIRED` 입니다. 중계기 코드는 바뀌지 않았습니다(도구 설명과 `linkAuth` 안내는 서버가 줍니다).
-- Download links from `vidia_get_downloads` are now valid only for the member they were issued to (server change). Fetch them with the API key in the `Authorization: Bearer` header, or in a browser signed in to VIDIA as the same member; without a key the answer is `401 AUTH_REQUIRED`. The bridge code is unchanged.
+- 다운로드 링크 안내를 고쳤습니다(서버 변경): `vidia_get_downloads` 의 링크는 이제 링크를 받은 회원만 쓸 수 있습니다. 받을 때 API 키를 `Authorization: Bearer` 헤더로 함께 보내거나, 같은 회원으로 비디아에 로그인한 브라우저에서 여세요. 지금은 서버의 유예 기간이라 키 없이도 받히지만 `Vidia-Deprecation` 경고가 붙고, 유예 기간이 끝나면 키 없이 열면 `401 AUTH_REQUIRED` 입니다. 중계기 코드는 바뀌지 않았습니다(도구 설명과 `linkAuth` 안내는 서버가 줍니다).
+- Download links from `vidia_get_downloads` are now valid only for the member they were issued to (server change). Fetch them with the API key in the `Authorization: Bearer` header, or in a browser signed in to VIDIA as the same member; during the server's grace period a link without a key still works with a `Vidia-Deprecation` warning; after it, the answer is `401 AUTH_REQUIRED`. The bridge code is unchanged.
 
 # 1.1.0
 
